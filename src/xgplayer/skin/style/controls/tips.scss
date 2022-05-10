@@ -1,0 +1,26 @@
+@import "./../common/variables";
+.xgplayer-skin-pc {
+    .xgplayer-tips{
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 4px;
+      display: none;
+      position: absolute;
+      color: #fff;
+      padding: 6px 12px;
+      text-align: center;
+      bottom: $xgplayer-controls-height;
+      margin-bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 500;
+    }
+}
+
+.xgplayer-skin-pc.xgplayer-mobile {
+  .xgplayer-tips{
+    display: none !important;
+  }
+}

@@ -1,0 +1,143 @@
+@import "./../common/variables";
+.xgplayer-skin-pc {
+  .xgplayer-volume {
+    order: $xgplayer-volume-order;
+    outline: none;
+    height: $xgplayer-controls-height;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+    z-index: 18;
+    .xgplayer-icon {
+      div {
+        height: $icon-size;
+      }
+      .xgplayer-icon-large {
+        display: block;
+      }
+      .xgplayer-icon-small {
+        display: none;
+      }
+      .xgplayer-icon-muted {
+        display: none;
+      }
+    }
+  }
+
+  .xgplayer-slider{
+    display: none;
+    position: absolute;
+    width: 46px;
+    height: 110px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    bottom: calc(#{$xgplayer-controls-height} + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    outline: none;
+    &:after{
+      content:" ";
+      display:block;
+      height: 15px;
+      width: 46px;
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      z-index: 20;
+    }
+  }
+
+  .xgplayer-bar,.xgplayer-drag{
+    display: block;
+    position: absolute;
+    bottom: 14px;
+    left: 22px;
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 100px;
+    width: 4px;
+    height: 76px;
+    outline: none;
+    cursor: pointer;
+  }
+  .xgplayer-drag{
+    bottom: 0;
+    left: 0;
+    background: $xgplayer-volume-active-color;
+    max-height: 76px;
+    &:after{
+      content: " ";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.26);
+      position: absolute;
+      border-radius: 50%;
+      left: -2px;
+      top: -6px;
+    }
+  }
+}
+
+.xgplayer-skin-pc.xgplayer-volume-active {
+  .xgplayer-slider{
+    display: block;
+  }
+}
+
+.xgplayer-skin-pc.xgplayer-volume-large {
+  .xgplayer-volume {
+    .xgplayer-icon {
+      .xgplayer-icon-large {
+        display: block;
+      }
+      .xgplayer-icon-small {
+        display: none;
+      }
+      .xgplayer-icon-muted {
+        display: none;
+      }
+    }
+  }
+}
+
+.xgplayer-skin-pc.xgplayer-volume-small {
+  .xgplayer-volume {
+    .xgplayer-icon {
+      .xgplayer-icon-large {
+        display: none;
+      }
+      .xgplayer-icon-small {
+        display: block;
+      }
+      .xgplayer-icon-muted {
+        display: none;
+      }
+    }
+  }
+}
+
+.xgplayer-skin-pc.xgplayer-volume-muted {
+  .xgplayer-volume {
+    .xgplayer-icon {
+      .xgplayer-icon-large {
+        display: none;
+      }
+      .xgplayer-icon-small {
+        display: none;
+      }
+      .xgplayer-icon-muted {
+        display: block;
+      }
+    }
+  }
+}
+
+.xgplayer-skin-pc.xgplayer-mobile {
+  .xgplayer-volume {
+    .xgplayer-slider {
+      display: none;
+    }
+  }
+}

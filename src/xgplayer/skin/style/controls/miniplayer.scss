@@ -1,0 +1,99 @@
+@import "./../common/variables";
+.xgplayer-skin-pc {
+    .xgplayer-miniplayer {
+      order: $xgplayer-miniplayer-order;
+      height: $xgplayer-controls-height;
+      z-index: 18;
+      position: relative;
+      outline: none;
+      display: flex;
+      align-items: center;
+      cursor: default;
+      margin: 0 8px;
+      .name {
+        font-size: $controls-font-size;
+        cursor: pointer;
+        padding: 0 8px;
+        height: $icon-size;
+        line-height: $icon-size;
+        color: #fff;
+        font-weight: bold;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+  
+    .xgplayer-miniplayer-lay{
+      position: absolute;
+      top: 26px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 130;
+      cursor: pointer;
+      background-color: transparent;
+      display: none;
+      div{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  
+    .xgplayer-miniplayer-drag{
+      cursor: move;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 26px;
+      line-height: 26px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+      z-index: 130;
+      display: none;
+      .drag-handle {
+        width: 100%;
+      }
+    }
+  }
+  
+  .xgplayer-skin-pc.xgplayer-miniplayer-active {
+    position: fixed;
+    right: 0;
+    bottom: 200px;
+    width: 320px;
+    height: 180px;
+    z-index: 110;
+    .xgplayer-controls {
+      display: none;
+    }
+    .xgplayer-danmu {
+      display: none;
+    }
+    .xgplayer-miniplayer-lay{
+      display: block;
+    }
+  }
+  
+  .xgplayer-skin-pc.xgplayer-miniplayer-active {
+    .xgplayer-miniplayer-drag {
+      display: flex;
+    }
+  }
+  
+  .xgplayer-skin-pc.xgplayer-inactive {
+    .xgplayer-miniplayer-drag {
+      display: none;
+    }
+  }
+  .lang-is-jp {
+    .xgplayer-miniplayer {
+      .name {
+        span{
+          width: 70px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  

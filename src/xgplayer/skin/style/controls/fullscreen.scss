@@ -1,0 +1,58 @@
+@import "./../common/variables";
+.xgplayer-skin-pc {
+  .xgplayer-fullscreen, .xgplayer-fullscreen-img {
+    order: $xgplayer-fullscreen-order;
+    height: $xgplayer-controls-height;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 8px;
+    .xgplayer-icon {
+      div {
+        position: absolute;
+      }
+      .xgplayer-icon-requestfull {
+        display: block;
+      }
+      .xgplayer-icon-exitfull {
+        display: none;
+      }
+    }
+    .xgplayer-tips {
+      .xgplayer-tip-requestfull {
+        display: block;
+      }
+      .xgplayer-tip-exitfull {
+        display: none;
+      }
+    }
+    &:hover {
+      opacity: 0.85;
+      .xgplayer-tips {
+        display: block;
+      }
+    }
+  }
+}
+
+.xgplayer-skin-pc.xgplayer-is-fullscreen, .xgplayer-skin-pc.xgplayer-rotate-fullscreen{
+  .xgplayer-fullscreen, .xgplayer-fullscreen-img {
+    .xgplayer-icon {
+      .xgplayer-icon-requestfull {
+        display: none;
+      }
+      .xgplayer-icon-exitfull {
+        display: block;
+      }
+    }
+    .xgplayer-tips {
+      .xgplayer-tip-requestfull {
+        display: none;
+      }
+      .xgplayer-tip-exitfull {
+        display: block;
+      }
+    }
+  }
+}

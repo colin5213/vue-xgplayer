@@ -1,0 +1,34 @@
+@import "./../common/variables";
+.xgplayer-skin-pc {
+  .xgplayer-definition {
+    order: $xgplayer-definition-order;
+    height: $xgplayer-controls-height;
+    z-index: 18;
+    position: relative;
+    outline: none;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    margin: 0 8px;
+    .name {
+      font-size: $controls-font-size;
+      cursor: pointer;
+      padding: 0 8px;
+      height: $icon-size;
+      line-height: $icon-size;
+      color: #fff;
+      font-weight: bold;
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+.xgplayer-skin-pc.xgplayer-definition-active {
+  .xgplayer-definition {
+    .xgplayer-control-item_popover {
+      display: block;
+    }
+  }
+}

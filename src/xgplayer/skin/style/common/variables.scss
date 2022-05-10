@@ -1,0 +1,31 @@
+// order:
+$xgplayer-play-order: 1;
+$xgplayer-playNext-order: 2;
+$xgplayer-time-order: 3;
+$xgplayer-reload-order: 4;
+$xgplayer-placeholder-order: 5;
+$xgplayer-danmu-order: 6;
+$xgplayer-danmu-panel-order: 7;
+$xgplayer-textTrack-order: 8;
+$xgplayer-playback-order: 9;
+$xgplayer-definition-order: 10;
+$xgplayer-pip-order: 11;
+$xgplayer-miniplayer-order: 12;
+$xgplayer-rotate-order: 13;
+$xgplayer-screenShot-order: 14;
+$xgplayer-airplay-order: 15;
+$xgplayer-download-order: 16;
+$xgplayer-volume-order: 17;
+$xgplayer-cssFullscreen-order: 18;
+$xgplayer-fullscreen-order: 19;
+
+// color:
+$color-primary: #ff3d5e;
+$xgplayer-progress-played-color: $color-primary; // 已播放进度条
+$danmu-switch-active-color: $color-primary; // 弹幕开关
+$xgplayer-volume-active-color: $color-primary; // 音量
+
+// size:
+$xgplayer-controls-height: 46px;  // 控件条高度
+$icon-size: 30px; // icon 大小
+$controls-font-size: 15px;  // 字体大小

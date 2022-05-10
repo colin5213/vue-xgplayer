@@ -1,0 +1,37 @@
+@import "./../common/variables";
+.xgplayer-skin-pc {
+  .xgplayer-pip {
+    order: $xgplayer-pip-order;
+    height: $xgplayer-controls-height;
+    z-index: 18;
+    position: relative;
+    outline: none;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    margin: 0 8px;
+    .name {
+      font-size: $controls-font-size;
+      cursor: pointer;
+      padding: 0 8px;
+      height: $icon-size;
+      line-height: $icon-size;
+      color: #fff;
+      font-weight: bold;
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+.lang-is-jp {
+  .xgplayer-pip {
+    .name {
+      span{
+        width: 70px;
+        height: 20px;
+      }
+    }
+  }
+}

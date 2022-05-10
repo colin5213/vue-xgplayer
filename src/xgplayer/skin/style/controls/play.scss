@@ -1,0 +1,79 @@
+@import "./../common/variables";
+.xgplayer-skin-pc {
+  .xgplayer-play, .xgplayer-play-img {
+    height: $xgplayer-controls-height;
+    position: relative;
+    order: $xgplayer-play-order;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .xgplayer-icon {
+      div {
+        position: absolute;
+        height: $icon-size;
+      }
+      .xgplayer-icon-play {
+        display: block;
+      }
+      .xgplayer-icon-pause {
+        display: none;
+      }
+    }
+    .xgplayer-tips {
+      .xgplayer-tip-play {
+        display: block;
+      }
+      .xgplayer-tip-pause {
+        display: none;
+      }
+    }
+    &:hover {
+      opacity: 0.85;
+      .xgplayer-tips {
+        display: block;
+      }
+    }
+  }
+}
+
+.xgplayer-skin-pc.xgplayer-playing {
+  .xgplayer-play, .xgplayer-play-img {
+    .xgplayer-icon {
+      .xgplayer-icon-play {
+        display: none;
+      }
+      .xgplayer-icon-pause {
+        display: block;
+      }
+    }
+    .xgplayer-tips {
+      .xgplayer-tip-play {
+        display: none;
+      }
+      .xgplayer-tip-pause {
+        display: block;
+      }
+    }
+  }
+}
+
+.xgplayer-skin-pc.xgplayer-pause {
+  .xgplayer-play, .xgplayer-play-img {
+    .xgplayer-icon {
+      .xgplayer-icon-play {
+        display: block;
+      }
+      .xgplayer-icon-pause {
+        display: none;
+      }
+    }
+    .xgplayer-tips {
+      .xgplayer-tip-play {
+        display: block;
+      }
+      .xgplayer-tip-pause {
+        display: none;
+      }
+    }
+  }
+}

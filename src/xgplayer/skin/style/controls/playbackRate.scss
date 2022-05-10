@@ -1,0 +1,44 @@
+
+@import "./../common/variables";
+.xgplayer-skin-pc {
+  .xgplayer-playbackrate {
+    order: $xgplayer-playback-order;
+    height: $xgplayer-controls-height;
+    z-index: 18;
+    position: relative;
+    outline: none;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    margin: 0 8px;
+    .name {
+      font-size: $controls-font-size;
+      cursor: pointer;
+      padding: 0 10px;
+      height: $icon-size;
+      line-height: $icon-size;
+      color: #fff;
+      font-weight: bold;
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+    span {
+      position: relative;
+      top: 19px;
+      font-weight: bold;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.xgplayer-skin-pc.xgplayer-playbackrate-active {
+  .xgplayer-playbackrate {
+    .xgplayer-control-item_popover {
+      display: block;
+    }
+  }
+}

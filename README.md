@@ -1,4 +1,4 @@
-# xgplayer
+# vue-xgplayer
 
 ## Project setup
 ```

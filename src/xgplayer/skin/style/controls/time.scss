@@ -1,0 +1,25 @@
+@import "./../common/variables";
+.xgplayer-skin-pc {
+  .xgplayer-time {
+    order: $xgplayer-time-order;
+    font-family: ArialMT;
+    font-size: 16px;
+    color: #fff;
+    line-height: $xgplayer-controls-height;
+    height: $xgplayer-controls-height;
+    text-align: center;
+    display: inline-block;
+    margin: 0 8px;
+    span {
+      color: rgba(255, 255, 255, 0.50);
+    }
+    .xgplayer-time-current {
+      color: #fff;
+    }
+    .xgplayer-time-current::after {
+      content: "/";
+      display: inline-block;
+      padding: 0 3px;
+    }
+  }
+}

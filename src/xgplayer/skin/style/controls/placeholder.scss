@@ -1,0 +1,8 @@
+@import "./../common/variables";
+.xgplayer-skin-pc {
+  .xgplayer-placeholder {
+    flex:1;
+    order: $xgplayer-placeholder-order;
+    display: block;
+  }
+}

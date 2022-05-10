@@ -1,0 +1,41 @@
+@import "./../common/variables";
+.xgplayer-skin-pc {
+  .xgplayer-texttrack {
+    order: $xgplayer-textTrack-order;
+    height: $xgplayer-controls-height;
+    z-index: 18;
+    position: relative;
+    outline: none;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    margin: 0 8px;
+    .name {
+      font-size: $controls-font-size;
+      cursor: pointer;
+      padding: 0 8px;
+      height: $icon-size;
+      line-height: $icon-size;
+      color: #fff;
+      font-weight: bold;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    &.xgplayer-texttrack-hide {
+      display: none;
+    }
+  }
+}
+
+xg-text-track {
+  transition: bottom .3s ease;
+}
+
+.xgplayer-skin-pc.xgplayer-texttrack-active {
+  .xgplayer-texttrack {
+    .xgplayer-control-item_popover {
+      display: block;
+    }
+  }
+}
