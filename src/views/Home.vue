@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <vue-xgplayer :config="playerConfig" @player="resourceReady" />
-    <vue-xgplayer :config="playerConfig" @player="resourceReady" />
+    <!-- <vue-xgplayer :config="playerConfig" @player="resourceReady" /> -->
   </div>
 </template>
 
 <script>
 import VueXgplayer from '@/components/VueXgplayer.vue'
-const videoUrl = '//f.video.weibocdn.com/u0/n3jTYtpagx07VUW32p8I01041202TjwT0E020.mp4?label=mp4_1080p&template=1920x1080.25.0&media_id=4767291544633399&tp=8x8A3El:YTkl0eM8&us=0&ori=1&bf=3&ot=h&ps=3lckmu&uid=6u5egs&ab=7397-g1,7332-g1,6377-g0,1192-g0,1046-g2,1258-g0,7598-g0,3601-g27&Expires=1652178034&ssig=R3lXHmk0XU&KID=unistore,video'
+const videoUrl = '//sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/mp4/xgplayer-demo-360p.mp4'
 export default {
   name: 'Home',
   components: {
@@ -16,6 +16,7 @@ export default {
   data () {
     return {
       playerConfig: {
+        ignores: ['download'], //配置项关闭
         url: videoUrl,
         // poster: '//lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/byted-player-videos/1.0.0/poster.jpg', // 封面
         // fluid: true, // 流体大小
@@ -27,7 +28,9 @@ export default {
         playbackRate: [0.5, 0.75, 1.0, 1.5, 3.0], // 倍速
         defaultPlaybackRate: 1.0, // 初始倍数
         pip: false, // #画中画
-        miniplayer: false, // 开启小窗
+        miniplayer: true, // 开启小窗
+        closeVideoClick: false,
+        closeVideoDblclick: true, //video触发dblclick事件后进入/退出全屏
         miniplayerConfig: { // 小窗配置
           bottom: 50,
           right: 50,
@@ -56,7 +59,7 @@ export default {
             }
           }, {
             time: 22,
-            text: '标记文字'
+            text: '<img src="https://wx2.sinaimg.cn/orj360/003nChGVgy1h24alf853zj60hs0a0aa802.jpg" width="100px" height="100px" />'
           }, {
             time: 56,
             duration: 1,
@@ -64,7 +67,7 @@ export default {
             time: 76,
           }
         ],
-        download: false, //设置download控件显示
+        download: true, //设置download控件显示
         playNext: { // 下一集
           urlList: [videoUrl]
         },

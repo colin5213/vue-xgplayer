@@ -9,6 +9,7 @@
     align-items: center;
     margin: 0 8px;
     z-index: 18;
+    cursor: pointer;
     .xgplayer-icon {
       div {
         height: $icon-size;
@@ -22,6 +23,9 @@
       .xgplayer-icon-muted {
         display: none;
       }
+    }
+    &:hover {
+      opacity: 0.85;
     }
   }
 

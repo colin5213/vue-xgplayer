@@ -22,6 +22,7 @@
 
 <script>
 import Player from 'xgplayer'
+import Mp4Player from 'xgplayer-mp4';
 import '@/xgplayer/skin/index.js'
 
 export default {

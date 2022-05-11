@@ -3,23 +3,25 @@
     .xgplayer-miniplayer {
       order: $xgplayer-miniplayer-order;
       height: $xgplayer-controls-height;
-      z-index: 18;
       position: relative;
-      outline: none;
       display: flex;
       align-items: center;
-      cursor: default;
+      cursor: pointer;
       margin: 0 8px;
-      .name {
-        font-size: $controls-font-size;
-        cursor: pointer;
-        padding: 0 8px;
-        height: $icon-size;
-        line-height: $icon-size;
-        color: #fff;
-        font-weight: bold;
-        &:hover {
-          opacity: 0.85;
+      .xgplayer-icon {
+        div {
+          position: absolute;
+        }
+      }
+      .xgplayer-tips {
+        .xgplayer-tip-miniplayer {
+          display: block;
+        }
+      }
+      &:hover {
+        opacity: 0.85;
+        .xgplayer-tips {
+          display: block;
         }
       }
     }
